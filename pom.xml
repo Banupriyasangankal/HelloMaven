@@ -4,12 +4,3 @@
 <artifactId>HelloMaven</artifactId> 
 <version>1.0-SNAPSHOT</version> 
 </project> 
----
-- hosts: all
-  become: yes
-
-  tasks:
-    - name: Copy jar file
-      copy:
-        src: "/mnt/c/ProgramData/Jenkins/.jenkins/workspace/HelloMaven-CI/target/HelloMaven-1.0-SNAPSHOT.jar"
-        dest: "/opt/deployment/HelloMaven.jar"
